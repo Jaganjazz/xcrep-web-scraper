@@ -1,0 +1,100 @@
+@import './styles/variables.css';
+@import './styles/base.css';
+@import './styles/components.css';
+@import './styles/animations.css';
+
+/* Layout Shell */
+.app-container {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--bg-app);
+  background-image: 
+    radial-gradient(circle at 85% 12%, rgba(0, 242, 254, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 10% 75%, rgba(0, 229, 163, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(12, 18, 27, 0.6) 0%, transparent 100%);
+  background-attachment: fixed;
+}
+
+.main-viewport {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin-left: var(--sidebar-width);
+  transition: margin-left var(--ease-normal);
+}
+
+.content-area {
+  flex: 1;
+  padding: 2.25rem 2.75rem;
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   DASHBOARD PAGE
+   ========================================================================== */
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS (Mobile & Tablet)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .main-viewport {
+    margin-left: 0;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+    box-shadow: none;
+  }
+
+  .sidebar.sidebar-open {
+    transform: translateX(0);
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.7);
+  }
+
+  .mobile-menu-btn {
+    display: grid !important;
+  }
+
+  .content-area {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+/* Medium screens — stack hero */
+@media (max-width: 900px) {
+  .hero-banner {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    min-height: unset !important;
+  }
+
+  .hero-visual-wrap {
+    align-self: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-area {
+    padding: 1rem 0.85rem;
+  }
+
+  .dashboard-columns {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Hide heavy SVG visual on small screens */
+  .hero-visual-wrap {
+    display: none !important;
+  }
+}

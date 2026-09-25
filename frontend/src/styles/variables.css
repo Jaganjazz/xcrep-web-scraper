@@ -1,0 +1,160 @@
+:root {
+  /* ==========================================================================
+     COLOR SYSTEM (Dark Charcoal / Cyber Emerald / Gold Palette)
+     ========================================================================== */
+  /* Canvas & Layer Backgrounds */
+  --bg-app: #06090e;
+  --bg-sidebar: #090e15;
+  --bg-navbar: rgba(9, 14, 21, 0.85);
+  --bg-surface: #0c121b;
+  --bg-surface-elevated: #111a26;
+  --bg-card: rgba(14, 21, 31, 0.72);
+  --bg-card-hover: rgba(19, 29, 43, 0.85);
+  --bg-card-active: rgba(24, 37, 54, 0.95);
+  --bg-input: #0a0f16;
+  --bg-input-focus: #0e1520;
+  --bg-overlay: rgba(3, 5, 8, 0.8);
+
+  /* Primary Accent: Emerald / Teal / Cyan (matching screenshot) */
+  --accent-primary: #00e5a3;
+  --accent-primary-hover: #05f5b1;
+  --accent-emerald: #05d6a0;
+  --accent-teal: #00d2b4;
+  --accent-cyan: #00f2fe;
+  --accent-cyan-subtle: rgba(0, 242, 254, 0.12);
+  --accent-emerald-subtle: rgba(5, 214, 160, 0.12);
+  --accent-emerald-border: rgba(0, 229, 163, 0.35);
+
+  /* Secondary Accent: Subtle Amber / Gold (for Pro card, highlights) */
+  --accent-gold: #f59e0b;
+  --accent-amber: #d97706;
+  --accent-amber-subtle: rgba(245, 158, 11, 0.12);
+  --accent-amber-border: rgba(245, 158, 11, 0.3);
+
+  /* Status Colors */
+  --status-success: #05d6a0;
+  --status-success-bg: rgba(5, 214, 160, 0.12);
+  --status-success-border: rgba(5, 214, 160, 0.3);
+
+  --status-warning: #f59e0b;
+  --status-warning-bg: rgba(245, 158, 11, 0.12);
+  --status-warning-border: rgba(245, 158, 11, 0.3);
+
+  --status-error: #ef4444;
+  --status-error-bg: rgba(239, 68, 68, 0.12);
+  --status-error-border: rgba(239, 68, 68, 0.3);
+
+  --status-info: #00f2fe;
+  --status-info-bg: rgba(0, 242, 254, 0.12);
+  --status-info-border: rgba(0, 242, 254, 0.3);
+
+  /* Typography / Text Colors */
+  --text-white: #ffffff;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-dim: #475569;
+  --text-inverse: #06090e;
+
+  /* Borders & Dividers */
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-medium: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.18);
+  --border-focus: rgba(0, 242, 254, 0.6);
+  --border-active: rgba(0, 229, 163, 0.5);
+
+  /* ==========================================================================
+     GRADIENTS & SPECIAL EFFECTS
+     ========================================================================== */
+  --grad-primary: linear-gradient(135deg, #00f2fe 0%, #00e5a3 100%);
+  --grad-cta: linear-gradient(135deg, #00e5a3 0%, #00d2b4 100%);
+  --grad-emerald-soft: linear-gradient(135deg, rgba(0, 229, 163, 0.15) 0%, rgba(0, 242, 254, 0.08) 100%);
+  --grad-gold-card: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(180, 83, 9, 0.22) 100%);
+  --grad-gold-btn: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+
+  /* Glassmorphism Tokens */
+  --glass-blur-sm: 8px;
+  --glass-blur-md: 14px;
+  --glass-blur-lg: 20px;
+  --glass-filter-card: blur(var(--glass-blur-md)) saturate(140%);
+  --glass-filter-nav: blur(var(--glass-blur-lg)) saturate(160%);
+
+  /* Subtle Rim Highlight */
+  --glass-inner-bevel: inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+  --glass-inner-bevel-glow: inset 0 1px 0 0 rgba(0, 229, 163, 0.25);
+
+  /* ==========================================================================
+     SHADOWS & GLOW TOKENS
+     ========================================================================== */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 8px 24px -4px rgba(0, 0, 0, 0.55), 0 2px 6px -1px rgba(0, 0, 0, 0.3);
+  --shadow-elevated: 0 16px 36px -6px rgba(0, 0, 0, 0.7), 0 4px 12px -2px rgba(0, 0, 0, 0.4);
+  --shadow-modal: 0 25px 60px -12px rgba(0, 0, 0, 0.85), 0 0 0 1px var(--border-medium);
+  --shadow-dropdown: 0 12px 32px rgba(0, 0, 0, 0.65), 0 0 0 1px var(--border-medium);
+
+  /* Subtle Controlled Glow */
+  --glow-primary-sm: 0 0 14px rgba(0, 229, 163, 0.25);
+  --glow-primary-md: 0 0 24px rgba(0, 229, 163, 0.35);
+  --glow-cyan-sm: 0 0 16px rgba(0, 242, 254, 0.25);
+  --glow-gold-sm: 0 0 16px rgba(245, 158, 11, 0.25);
+
+  /* ==========================================================================
+     TYPOGRAPHY
+     ========================================================================== */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', Menlo, Monaco, Consolas, monospace;
+
+  /* Font Sizes */
+  --text-xs: 0.75rem;    /* 12px */
+  --text-sm: 0.84rem;    /* ~13.5px */
+  --text-base: 0.94rem;  /* 15px */
+  --text-md: 1.05rem;    /* ~17px */
+  --text-lg: 1.15rem;    /* ~18.5px */
+  --text-xl: 1.35rem;    /* ~21.5px */
+  --text-2xl: 1.75rem;   /* 28px */
+  --text-3xl: 2.5rem;    /* 40px */
+  --text-4xl: 3.25rem;   /* 52px */
+
+  /* Line Heights */
+  --leading-tight: 1.15;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+
+  /* Font Weights */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+
+  /* ==========================================================================
+     SPACING & SIZING TOKENS
+     ========================================================================== */
+  --space-2xs: 0.25rem;  /* 4px */
+  --space-xs: 0.5rem;    /* 8px */
+  --space-sm: 0.75rem;   /* 12px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 1.5rem;    /* 24px */
+  --space-xl: 2rem;      /* 32px */
+  --space-2xl: 3rem;     /* 48px */
+  --space-3xl: 4rem;     /* 64px */
+
+  /* Border Radius */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --ease-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-normal: 240ms cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-smooth: 350ms cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-bounce: 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Layout Dimensions */
+  --sidebar-width: 256px;
+  --navbar-height: 68px;
+}
