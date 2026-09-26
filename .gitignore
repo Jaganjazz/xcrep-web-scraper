@@ -28,6 +28,8 @@ wheels/
 .pytest_cache/
 .coverage
 htmlcov/
+coverage/
+.cache/
 
 # Data & Exports
 *.db
@@ -41,7 +43,7 @@ backend/data/exports/*
 data/exports/*
 !data/exports/.gitkeep
 
-# Environment variables
+# Environment variables & Secrets
 .env
 .env.*
 !.env.example
@@ -52,12 +54,23 @@ frontend/.env.local
 frontend/.env.*
 !frontend/.env.example
 *.env
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+credentials.json
+service-account*.json
 
 # Node & Frontend
 node_modules/
 frontend/node_modules/
 frontend/dist/
 frontend/.vite/
+dist/
+.next/
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -69,3 +82,4 @@ yarn-error.log*
 *.swo
 .DS_Store
 Thumbs.db
+
