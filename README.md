@@ -1,4 +1,4 @@
-# Web Scraper — Production Full-Stack Application
+# xcrep — Production Web Scraper Application
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](LICENSE)
 [![Backend: FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688.svg)](https://fastapi.tiangolo.com)
@@ -196,3 +196,4 @@ npm run build
 3. Build the frontend (`npm run build`) and serve static assets via Nginx or Cloudflare Pages.
 4. Run FastAPI using a production ASGI supervisor (e.g., `gunicorn -w 4 -k uvicorn.workers.UvicornWorker app.main:app`).
 5. Ensure the `backend/data/` directory is mapped to a persistent volume.
+
